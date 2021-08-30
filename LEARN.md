@@ -1,8 +1,7 @@
 THIS IS NOTE ABOUT WHAT I LARN/ RE-LEARN FROM THE COURSE :
 
 - Android Status bar height
-
-- installing & using eslint-config-react-native-community
+- setup eslint and integrate it eslint-config-react-native-community
   https://www.npmjs.com/package/@react-native-community/eslint-config
 
 didalam package.json -> didalam scripts:{} tambahkan "lint":"esslint . --ext .js" agar eslint ngecek semua js,
