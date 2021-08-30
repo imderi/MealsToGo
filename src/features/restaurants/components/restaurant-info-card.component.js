@@ -1,6 +1,23 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import styled from "styled-components";
+import { Text } from "react-native";
 import { Card } from "react-native-paper";
+
+// tanda quotes disini (secara konteks) `` adalah template string
+// styled component ini untuk styling komnponen bawaan react-native
+const Title = styled.Text`
+  margin: 16px;
+  color: red;
+`;
+
+// sedangkan yang ini kalo mau component custom (bisa juga untuk komponen bawaan)
+const RestaurantCard = styled(Card)`
+  background-color: white;
+`;
+
+const RestaurantCardCover = styled(Card.Cover)`
+  background-color: white;
+`;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
@@ -15,15 +32,9 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     isClosedTemporarily,
   } = restaurant;
   return (
-    <Card elevation={5} style={styles.card}>
-      <Card.Cover key={name} style={styles.cover} source={{ uri: photos[0] }} />
-      <Text style={styles.title}>{name}</Text>
-    </Card>
+    <RestaurantCard elevation={5}>
+      <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
+      <Title>{name}</Title>
+    </RestaurantCard>
   );
 };
-
-const styles = StyleSheet.create({
-  card: { backgroundColor: "white" },
-  cover: { backgroundColor: "white" },
-  title: { margin: 16 },
-});
