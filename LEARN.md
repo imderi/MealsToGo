@@ -19,7 +19,7 @@ didalam package.json -> didalam scripts:{} tambahkan "lint":"esslint . --ext .js
 Creating rnpaper Cards, Learning about consistency, and using styled components, styling menggunakan styled component dalam react native tetap menggunakan plain css, use background-color instead backgroundColor.
 -belajar mereferensikan variable didalam styled components for ex. StatusBar.currentHeight menggunakan ${StatusBar.currentHeight}.
 
-- membuat theme di styled components, kemudian digunakan di project menggunakan theme provider dari styled-component native, personal note: masih bingung sih, kenapa untuk spacing nggak pake object xl,lg,md,etc kok malah menggunakan array? karena jika menggunakan array, indexnya nggak merepresentasikan size secara eksplisit seperti lg,xl.etc.
+- membuat theme di styled components, kemudian digunakan di project menggunakan theme provider dari styled-component native,theme providernya digunakan di App.js personal note: masih bingung sih, kenapa untuk spacing nggak pake object xl,lg,md,etc kok malah menggunakan array? karena jika menggunakan array, indexnya nggak merepresentasikan size secara eksplisit seperti lg,xl.etc.
 
 - install & menggunakan expo-google-fonts "expo install ..." @expo-gppgle-fonts/oswald & lato, import custom fonts nya di App.js (current), please baca dokumentasi https://docs.expo.dev/guides/using-custom-fonts/
 
@@ -30,3 +30,10 @@ Creating rnpaper Cards, Learning about consistency, and using styled components,
 # 1 Sep 2021
 
 - Learn to use spacing, kadang gak abis pikir kenapa harus membuat komponent baru untuk spacing sampe numpuk" komponen? kenapa gak pake margin aja? bukannya jauh lebih rapih?
+- ternyata spacer diubah jadi wrapper yang memiliki margin, namun lebih reuse karena sudah ada size komponen yang telah dideklarasikan sebelumnya.
+  kata si mo', spacer dipake buat consistency, dan kalo ini gw juga setuju wkwkw
+
+- membuat text component, note: "flex-wrap: wrap, digunakan untuk mendefinisikan bahwa elemen item di dalam container flexbox tidak harus disejajarkan dalam satu baris. Artinya, elemen item tersebut digulung (dipindahkan) ke baris baru bila sudah memenuhi lebar container-nya."
+  selebihnya baca lagi code nya di text.components.js
+
+-

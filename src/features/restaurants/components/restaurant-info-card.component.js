@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components/native";
-import { Text, Image, View } from "react-native";
 import { Card } from "react-native-paper";
 import { SvgXml } from "react-native-svg";
 
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
+
+import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 
 // tanda quotes disini (secara konteks) `` adalah template string
@@ -42,17 +43,8 @@ const Rating = styled.View`
   margin-bottom: ${(props) => props.theme.space[2]};
 `;
 
-const Title = styled.Text`
-  font-family: ${(props) => props.theme.fonts.heading};
-  font-size: ${(props) => props.theme.fontSizes.body};
-  color: ${(props) => props.theme.colors.ui.primary};
-`;
-
-const Address = styled.Text`
-  font-family: ${(props) => props.theme.fonts.body};
-  font-size: ${(props) => props.theme.fontSizes.caption};
-  color: ${(props) => props.theme.colors.ui.primary};
-`;
+// GAK DIKASIH STYLING
+const Icon = styled.Image``;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
@@ -72,7 +64,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     <RestaurantCard elevation={5}>
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
       <Info>
-        <Title>{name}</Title>
+        <Text variant="label">{name}</Text>
         <Section>
           <Rating>
             {ratingArray?.map((_, index) => (
@@ -80,14 +72,18 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
             ))}
           </Rating>
           <SectionEnd>
-            {isClosedTemporarily && <Text>CLOSED TEMPORARILY</Text>}
-            <Spacer variant="left.medium" />
-            {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
-            <Spacer variant="left.medium" />
-            <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+            {isClosedTemporarily && (
+              <Text variant="error">CLOSED TEMPORARILY</Text>
+            )}
+            <Spacer position="left" size="large">
+              {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
+            </Spacer>
+            <Spacer position="left" size="large">
+              <Icon style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+            </Spacer>
           </SectionEnd>
         </Section>
-        <Address>{address}</Address>
+        <Text>{address}</Text>
       </Info>
     </RestaurantCard>
   );
