@@ -36,4 +36,6 @@ Creating rnpaper Cards, Learning about consistency, and using styled components,
 - membuat text component, note: "flex-wrap: wrap, digunakan untuk mendefinisikan bahwa elemen item di dalam container flexbox tidak harus disejajarkan dalam satu baris. Artinya, elemen item tersebut digulung (dipindahkan) ke baris baru bila sudah memenuhi lebar container-nya."
   selebihnya baca lagi code nya di text.components.js
 
--
+- memisahkan styling didalam komponen kedalam file terpisah, konteks: restaurant-info-card.component.js ke restaurant-info-card.styles.js
+
+- Re Learn Flatlist
