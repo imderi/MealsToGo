@@ -1,5 +1,7 @@
 THIS IS NOTE ABOUT WHAT I LARN/ RE-LEARN FROM THE COURSE :
 
+This note may not be readle for you, cuz this is just my point reminder
+
 - Android Status bar height
 - setup eslint and integrate it eslint-config-react-native-community
   https://www.npmjs.com/package/@react-native-community/eslint-config
@@ -24,3 +26,7 @@ Creating rnpaper Cards, Learning about consistency, and using styled components,
 - bermain dengan SVG, install react-native-svg agar bisa render svg di rn, https://github.com/react-native-svg/react-native-svg#installation
   tapi case nya disini pakai SvgXML
 - untuk rating, kita menggunakan Array.from(), coba pelajari lebih dalam, membuat rating dengan status closed ada di sebelah kanan menggunakan flex end.
+
+# 1 Sep 2021
+
+- Learn to use spacing, kadang gak abis pikir kenapa harus membuat komponent baru untuk spacing sampe numpuk" komponen? kenapa gak pake margin aja? bukannya jauh lebih rapih?
