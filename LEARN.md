@@ -52,4 +52,4 @@ Creating rnpaper Cards, Learning about consistency, and using styled components,
 
 important note: ()=>({}) curly braces didalam function body adalah shorthand untuk mereturn object
 
-- Simpilify tab icon logic
+- Simpilify tab icon logic, but not suitable for me
