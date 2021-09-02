@@ -19,6 +19,25 @@ import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 // NAVIGATION - TAB
 const Tab = createBottomTabNavigator();
 
+// simplifying tab bar icons
+const TAB_ICON = {
+  Restaurants: "restaurant",
+  RestaurantsOutline: "restaurant-outline",
+  Map: "map",
+  MapOutline: "map-outline",
+  Settings: "settings",
+  SettingsOutline: "settings-outline",
+};
+
+const createScreenOptions = ({ route }) => {
+  const iconName = TAB_ICON[route.name];
+  return {
+    tabBarIcon: ({ size, color }) => (
+      <Ionicons name={iconName} size={size} color={color} />
+    ),
+  };
+};
+
 const Map = () => {
   return (
     <SafeArea>
@@ -34,8 +53,6 @@ const Settings = () => {
     </SafeArea>
   );
 };
-
-// up is ex
 
 export default function App() {
   const [oswaldLoaded] = useOswald({
@@ -54,24 +71,11 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <NavigationContainer>
           <Tab.Navigator
-            screenOptions={({ route }) => ({
-              tabBarIcon: ({ focused, color, size }) => {
-                let iconName;
-
-                if (route.name === "Restaurants") {
-                  iconName = focused ? "restaurant" : "restaurant-outline";
-                } else if (route.name === "Map") {
-                  iconName = focused ? "map" : "map-outline";
-                } else if (route.name === "Settings") {
-                  iconName = focused ? "settings" : "settings-outline";
-                }
-
-                return <Ionicons name={iconName} size={size} color={color} />;
-              },
-              tabBarActiveTintColor: "tomato",
-              tabBarInactiveTintColor: "gray",
-              headerShown: false,
-            })}
+            screenOptions={createScreenOptions}
+            tabBarOptions={{
+              activeTintColor: "tomato",
+              inactiveTintColor: "gray",
+            }}
           >
             <Tab.Screen name="Restaurants" component={RestaurantsScreen} />
             <Tab.Screen name="Map" component={Map} />
