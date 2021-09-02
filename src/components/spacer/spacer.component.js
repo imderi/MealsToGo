@@ -1,6 +1,12 @@
 import React from "react";
 import styled, { useTheme } from "styled-components/native";
 
+// USAGE
+
+// <Spacer position="bottom" size="large">
+//  {children}
+// </Spacer> */
+
 const sizeVariant = {
   small: 1,
   medium: 2,

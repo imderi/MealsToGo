@@ -11,7 +11,7 @@ didalam package.json -> didalam scripts:{} tambahkan "lint":"esslint . --ext .js
 
 - setting prettier supaya format onsave => VSCODE => Preferences, settings, search "format ot save" dan nyalakan "fomat on save"
 
-- as always, react native paper :D my beloved ui kit,
+- as always,install react native paper :D my beloved ui kit,
 - nyobain Searchbar dari paper
 
 # 30 Aug 2021
@@ -38,4 +38,18 @@ Creating rnpaper Cards, Learning about consistency, and using styled components,
 
 - memisahkan styling didalam komponen kedalam file terpisah, konteks: restaurant-info-card.component.js ke restaurant-info-card.styles.js
 
-- Re Learn Flatlist
+- Re Learn Flatlist, relearn tentang keenapa harus menggunakan key untuk list, keys membantu react untuk mengidentidikasi item yang mengalami perubahan, bertambah atau dihapus.
+  flat list memiliki keunggulan memmory optimisation. contohnya scrollview scrollview merender semua child secara bersamaan namun, namun memiliki kekurangan dari segi performa karena langsung dirender bersamaan. sedangkan Flatist renders items lazily, saat items muncul dan menghapus item list saat tidak ditampilkan di screen untuk menghemat memory dan waktu proses.
+- contentcontainerstyle, will apply style to every flatlist child components
+- menggunakan attrs di styled components untuk FlatList agar bisa custom default props nya flat list, coba buka di restaurants.screen
+- baca lebih dalam mengenai key extractor
+
+# 2 Sep 2021
+
+- navigation, installation ++ libraries lainnya, install tab navigator,
+- membuat komponen safe area di src/components/utility/ , kenapa gak safeareaview biasa? soalnya didalemnya ada juga buat handle appbar android, gitu bro~
+- membuat icons untuk tab navigator, menggunakan expo vector icons, expo vector icons sudah include dialam expo jadi tidak perlu install, tinggal di import aja, baca: https://reactnavigation.org/docs/tab-based-navigation
+
+important note: ()=>({}) curly braces didalam function body adalah shorthand untuk mereturn object
+
+- Simpilify tab icon logic
