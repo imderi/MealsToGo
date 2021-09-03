@@ -11,6 +11,7 @@ const sizeVariant = {
   small: 1,
   medium: 2,
   large: 3,
+  xl: 6,
 };
 
 const positionVariant = {

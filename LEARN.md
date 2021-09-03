@@ -53,3 +53,14 @@ Creating rnpaper Cards, Learning about consistency, and using styled components,
 important note: ()=>({}) curly braces didalam function body adalah shorthand untuk mereturn object
 
 - Simpilify tab icon logic, but not suitable for me
+  ---- not yet finished bottom margin untuk safeareaview, flatlist & stled components
+
+- membuat services, context dan mock, belajar lagi promise, disini konteksnya membuat mockup promise
+
+- install camelize (yarn add camelize) untuk mengubah object keys menjadi camelcase, biar javascript bingit, ex: ha_ha jadi haHa
+
+# 3 Sep 2021
+
+- transform data mock, untuk restaurant service
+- membuat context untuk restaurant, restaurant service, mengimports function dari service kedalam context, kemudian menggunakan useState, createContext, useEffect, useMemo, kemudian restaurantscontext di import sebelum navigation container. kemudian consume context di children menggunakan useContext,
+  context digunakan di restaurants.screen.
