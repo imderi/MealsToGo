@@ -1,6 +1,6 @@
 THIS IS NOTE ABOUT WHAT I LARN/ RE-LEARN FROM THE COURSE :
 
-This note may not be readle for you, cuz this is just my point reminder
+This note may not be readable for you, cuz this is just my point reminder
 
 - Android Status bar height
 - setup eslint and integrate it eslint-config-react-native-community
@@ -64,3 +64,10 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 - transform data mock, untuk restaurant service
 - membuat context untuk restaurant, restaurant service, mengimports function dari service kedalam context, kemudian menggunakan useState, createContext, useEffect, useMemo, kemudian restaurantscontext di import sebelum navigation container. kemudian consume context di children menggunakan useContext,
   context digunakan di restaurants.screen.
+- melakukan object mutation, dengan membuat function
+- membuat activity indicator
+
+# 4 Sep 2021
+
+- Performa flatlist buruk bett, makanya harus belajar recyclerlistview dari Flipkart
+- intergrasi function search, belajar tentang geocoding
