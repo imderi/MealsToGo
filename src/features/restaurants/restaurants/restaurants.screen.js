@@ -1,16 +1,12 @@
 import React, { useContext } from "react";
 import styled from "styled-components/native";
 import { FlatList } from "react-native";
-import { Searchbar, ActivityIndicator, Colors } from "react-native-paper";
+import { ActivityIndicator, Colors } from "react-native-paper";
+import { Search } from "../components/search.component";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { RestaurantContext } from "../../../services/restaurants/restaurants.context";
-
-const SearchContainer = styled.View`
-  padding: ${(props) => props.theme.space[3]};
-  /* background-color: ${(props) => props.theme.colors.bg.primary}; */
-`;
 
 const LoadingContainer = styled.View`
   position: absolute;
@@ -22,7 +18,7 @@ const LoadingIndicator = styled(ActivityIndicator)`
   margin-left: -25px;
 `;
 
-// arrts disini adalah function untuk mention setiap arrtibutes dari setiap elemen dom yang sama
+// attrs disini adalah function untuk mention setiap arrtibutes dari setiap elemen dom yang sama
 // singkatnya untuk memberikan akses untuk memberikan props pada default flatlist
 const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: { padding: 16 },
@@ -47,9 +43,9 @@ export const RestaurantsScreen = () => {
           />
         </LoadingContainer>
       )}
-      <SearchContainer>
-        <Searchbar />
-      </SearchContainer>
+
+      <Search />
+
       <RestaurantList
         // ini data dari konteks
         data={restaurants}

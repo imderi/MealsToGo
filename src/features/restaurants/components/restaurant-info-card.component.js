@@ -25,10 +25,11 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     photos = [
       "https://media.istockphoto.com/photos/fiesta-mexicana-mexican-fiesta-outdoors-tortilla-chips-beef-with-picture-id1227595910",
     ],
-    address = "100 some random street",
+    address,
     isOpenNow = true,
     rating = 4,
     isClosedTemporarily = true,
+    placeId,
   } = restaurant;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
@@ -40,7 +41,12 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         <Section>
           <Rating>
             {ratingArray?.map((_, index) => (
-              <SvgXml key={index} xml={star} width={20} height={20} />
+              <SvgXml
+                key={`star-${placeId}-${index}`}
+                xml={star}
+                width={20}
+                height={20}
+              />
             ))}
           </Rating>
           <SectionEnd>

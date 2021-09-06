@@ -70,4 +70,13 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 # 4 Sep 2021
 
 - Performa flatlist buruk bett, makanya harus belajar recyclerlistview dari Flipkart
-- intergrasi function search, belajar tentang geocoding
+- intergrasi function search, belajar tentang geocoding,
+- membuat mock location, membuat location service menggunakan camelize dan promise, belajar destructuring object berdimensi (buka restaurants.service.js)
+- pattern context, si mo ini patternya gini data > service (function untuk ngolah datanya terutama "promise") > context, setelah membuat location mock, location service dan location context, kemudian kita masukan context providernya di app, pastinya setelah di import, mari kita consume di komponen child nya
+
+# 6 Sep 2021
+
+- membuat component baru bernama search component, memindahkan searchbar kedalam searchcomponent, kemudian
+- dialam search.component mengimport usecontext dan menggunakan LocationContext sebagai context nya.
+- consume locationcontext didalam restaurant context untuk bisa dapat data
+- mengubah nama variabel dari server kedalam nama yang berbeda, buka restaurants.service.js
