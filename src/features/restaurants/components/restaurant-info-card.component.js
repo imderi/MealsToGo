@@ -1,12 +1,11 @@
 import React from "react";
-import styled from "styled-components/native";
 import { SvgXml } from "react-native-svg";
-
-import star from "../../../../assets/star";
-import open from "../../../../assets/open";
 
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
+
+import star from "../../../../assets/star";
+import open from "../../../../assets/open";
 
 import {
   RestaurantCard,
@@ -40,7 +39,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         <Text variant="label">{name}</Text>
         <Section>
           <Rating>
-            {ratingArray?.map((_, index) => (
+            {ratingArray.map((_, index) => (
               <SvgXml
                 key={`star-${placeId}-${index}`}
                 xml={star}

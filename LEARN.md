@@ -80,3 +80,13 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 - dialam search.component mengimport usecontext dan menggunakan LocationContext sebagai context nya.
 - consume locationcontext didalam restaurant context untuk bisa dapat data
 - mengubah nama variabel dari server kedalam nama yang berbeda, buka restaurants.service.js
+- intinya di part ini belajar tenang context, dan menghubungkan konteks satu dengan konteks lainnnya
+
+---
+
+- optimisasi navigation (react native navigation) untuk navigasi yang lebih kompleks
+- memindahkan navigasi utama didalam app.js ke file tersendiri infra../navigation/app.navigator.js,
+  membuat index.js didalam navigation dir, kemudian mengimport AppNavigator kedalamnya, membuat components navigation kemudian me return AppNavigator.
+- install react navigation stack https://reactnavigation.org/docs/stack-navigator/
+- membuat navigation (stack navigation) untuk restaurants screen (spesifik), sestaurant navigator tidak perlu dibungkus navigationcontainer karena merupakan sub dari stack parents, setiap child dari navigation akan memiliki props navigate
+- membuat navigasi untuk screen restaurantdetail, import \*_transisitonpresets_, NOTE PENTING: hati" menggunakan shortcut "xxx?.map()" sebelum map, karena di android jadi force close,

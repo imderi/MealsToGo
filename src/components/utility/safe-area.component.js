@@ -1,6 +1,5 @@
 import styled from "styled-components/native";
-import { SafeAreaView } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import { SafeAreaView, StatusBar } from "react-native";
 
 // JIKA STATUSBAR DI ANDROID FULL
 // Bisa menggunakan package StatusBar untuk menentukan tinggi status bar, ("hanya untuk android")

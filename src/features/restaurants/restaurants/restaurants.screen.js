@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components/native";
-import { FlatList } from "react-native";
+import { FlatList, TouchableOpacity } from "react-native";
 import { ActivityIndicator, Colors } from "react-native-paper";
 import { Search } from "../components/search.component";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
@@ -28,7 +28,7 @@ const RestaurantList = styled(FlatList).attrs({
 //   padding: 16px;
 // `;
 
-export const RestaurantsScreen = () => {
+export const RestaurantsScreen = ({ navigation }) => {
   // use context
   const { isLoading, restaurants, error } = useContext(RestaurantContext);
 
@@ -50,9 +50,13 @@ export const RestaurantsScreen = () => {
         // ini data dari konteks
         data={restaurants}
         renderItem={({ item }) => (
-          <Spacer position="bottom" size="large">
-            <RestaurantInfoCard restaurant={item} />
-          </Spacer>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("RestaurantDetail")}
+          >
+            <Spacer position="bottom" size="large">
+              <RestaurantInfoCard restaurant={item} />
+            </Spacer>
+          </TouchableOpacity>
         )}
         keyExtractor={(item, index) => item + index.toString()}
       />
