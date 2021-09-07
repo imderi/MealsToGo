@@ -22,5 +22,5 @@ export const locationTransform = (result) => {
   // destructuring
   const { lat, lng } = geometry.location;
   // return object
-  return { lat, lng };
+  return { lat, lng, viewport: geometry.viewport };
 };

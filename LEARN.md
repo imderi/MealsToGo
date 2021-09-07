@@ -97,4 +97,11 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 - membuat list accordion, lihat di restaurant-detail.screen.js
   -- membuat botton close custom, soalnya biar desainnya sesuai selera wkwkwk
 - installasi react-native maps "expo install react-native-maps"
-- membuat features baru untuk map.screen
+- membuat "features" baru untuk map.screen
+- membuat searchbar menggunakan search yang lama (duplikat) namun khusus halaman map
+- setting map region, import location context dan restaurants context kedalam map.screen, membuat mapview.marker.
+
+-- PENTING -- buka map.screen.js untuk melihat rumus menentukan latdelta!
+
+- membuat marker untuk map, please buka map screen,
+- membuat resuable component bernama CompactRestaurantInfo

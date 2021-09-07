@@ -5,13 +5,14 @@ import { SafeArea } from "../../../components/utility/safe-area.component";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 import { List } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
+import { Spacer } from "../../../components/spacer/spacer.component";
 
 const CloseButtonWrapper = styled.TouchableOpacity`
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   background-color: rgba(80, 80, 80, 0.7);
   border-radius: ${45 / 2}px;
-  margin: 10px;
+  margin: 12px;
   position: absolute;
   z-index: 1;
   align-items: center;
@@ -21,7 +22,7 @@ const CloseButtonWrapper = styled.TouchableOpacity`
 const CloseButton = ({ onPress }) => {
   return (
     <CloseButtonWrapper onPress={onPress}>
-      <Ionicons name="close" size={32} color="white" />
+      <Ionicons name="close" size={22} color="white" />
     </CloseButtonWrapper>
   );
 };
@@ -40,7 +41,7 @@ export const RestaurantDetail = ({ route, navigation: { goBack } }) => {
 
       <RestaurantInfoCard restaurant={restaurant} />
       <ScrollView>
-        <List.Section title="Menu">
+        <Spacer position="top" size="large">
           <List.Accordion
             title="Breakfast"
             left={(props) => <List.Icon {...props} icon="bread-slice" />}
@@ -80,7 +81,7 @@ export const RestaurantDetail = ({ route, navigation: { goBack } }) => {
             <List.Item title="First Item" />
             <List.Item title="Second Item" />
           </List.Accordion>
-        </List.Section>
+        </Spacer>
       </ScrollView>
     </SafeArea>
   );

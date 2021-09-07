@@ -7,6 +7,10 @@ import { LocationContext } from "../../../services/location/location.context";
 const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space[3]};
   /* background-color: ${(props) => props.theme.colors.bg.primary}; */
+  position: absolute;
+  z-index: 999;
+  top: 48px;
+  width: 100%;
 `;
 
 export const Search = () => {
@@ -20,6 +24,7 @@ export const Search = () => {
   return (
     <SearchContainer>
       <Searchbar
+        icon="map"
         placeholder="Search for a location"
         value={searchKeyword}
         // Akan mentrigger search function saat submit editing
