@@ -90,3 +90,11 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 - install react navigation stack https://reactnavigation.org/docs/stack-navigator/
 - membuat navigation (stack navigation) untuk restaurants screen (spesifik), sestaurant navigator tidak perlu dibungkus navigationcontainer karena merupakan sub dari stack parents, setiap child dari navigation akan memiliki props navigate
 - membuat navigasi untuk screen restaurantdetail, import \*_transisitonpresets_, NOTE PENTING: hati" menggunakan shortcut "xxx?.map()" sebelum map, karena di android jadi force close,
+- mengirim params melalui navigate("Screens", {propsdisini})
+
+# 7 Sep 2021
+
+- membuat list accordion, lihat di restaurant-detail.screen.js
+  -- membuat botton close custom, soalnya biar desainnya sesuai selera wkwkwk
+- installasi react-native maps "expo install react-native-maps"
+- membuat features baru untuk map.screen

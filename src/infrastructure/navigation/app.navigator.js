@@ -9,17 +9,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 // OTHERS NAVIGATOR
 import { RestaurantNavigator } from "./restaurants.navigation";
+import { MapNavigator } from "./map.navigation";
 
 // NAVIGATION - TAB
 const Tab = createBottomTabNavigator();
-
-const Map = () => {
-  return (
-    <SafeArea>
-      <Text>Map Here</Text>
-    </SafeArea>
-  );
-};
 
 const Settings = () => {
   return (
@@ -39,9 +32,9 @@ export const AppNavigator = () => {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === "RestaurantNavigator") {
+            if (route.name === "Restaurant") {
               iconName = focused ? "restaurant" : "restaurant-outline";
-            } else if (route.name === "Map") {
+            } else if (route.name === "Maps") {
               iconName = focused ? "map" : "map-outline";
             } else if (route.name === "Settings") {
               iconName = focused ? "settings" : "settings-outline";
@@ -54,11 +47,8 @@ export const AppNavigator = () => {
           headerShown: false,
         })}
       >
-        <Tab.Screen
-          name="RestaurantNavigator"
-          component={RestaurantNavigator}
-        />
-        <Tab.Screen name="Map" component={Map} />
+        <Tab.Screen name="Restaurant" component={RestaurantNavigator} />
+        <Tab.Screen name="Maps" component={MapNavigator} />
         <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     </NavigationContainer>

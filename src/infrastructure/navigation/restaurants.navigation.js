@@ -3,18 +3,15 @@ import {
   createStackNavigator,
   TransitionPresets,
 } from "@react-navigation/stack";
-import { Text } from "react-native";
+
 // SCREEN
-import { RestaurantsScreen } from "../../features/restaurants/restaurants/restaurants.screen";
+import { RestaurantsScreen } from "../../features/restaurants/screens/restaurants.screen";
+import { RestaurantDetail } from "../../features/restaurants/screens/restaurant-detail.screen";
 
 // pada screen ini, navigation container tidak dibutuhkan
 // karena restaurantstack merupakan sub dari appnavigator
 
 const RestaurantStack = createStackNavigator();
-
-const RestaurantDetail = () => {
-  return <Text>Restaurant Detail</Text>;
-};
 
 export const RestaurantNavigator = () => {
   return (
