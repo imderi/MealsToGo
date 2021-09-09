@@ -108,7 +108,7 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 
 # 8 Sep 2021
 
-- memnginstall expo webview, agar image dapat dirender di android
+- memnginstall expo webview, agar image dapat dirender di android {mapview}
 - membuat onpress dalam mapview.callout
 - membuat favourite context, import di app dan consume di restaurants screen, membuat favorite component, coba liat di favorite.component.
 
@@ -130,3 +130,5 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 - expo install firebase
 - buka app.js
 - membuat key firebase, copy setting ke app.js, didalam app.js membuat firebase.auth
+- membuat service baru untuk authentication
+- membuat authentication context dan import ke app
