@@ -24,7 +24,6 @@ export const Search = () => {
   return (
     <SearchContainer>
       <Searchbar
-        icon="map"
         placeholder="Search for a location"
         value={searchKeyword}
         // Akan mentrigger search function saat submit editing

@@ -1,20 +1,21 @@
 import React, { useState } from "react";
-import { ScrollView } from "react-native";
 import styled from "styled-components/native";
+import { View } from "react-native";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 import { List } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
 import { Spacer } from "../../../components/spacer/spacer.component";
+import { ScrollView } from "react-native-gesture-handler";
 
 const CloseButtonWrapper = styled.TouchableOpacity`
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  min-height: 40px;
   background-color: rgba(80, 80, 80, 0.7);
   border-radius: ${45 / 2}px;
-  margin: 12px;
+  margin: 10px;
   position: absolute;
-  z-index: 1;
+  z-index: 999;
   align-items: center;
   justify-content: center;
 `;
@@ -22,7 +23,7 @@ const CloseButtonWrapper = styled.TouchableOpacity`
 const CloseButton = ({ onPress }) => {
   return (
     <CloseButtonWrapper onPress={onPress}>
-      <Ionicons name="close" size={22} color="white" />
+      <Ionicons name="close" size={25} color="white" />
     </CloseButtonWrapper>
   );
 };
@@ -40,8 +41,8 @@ export const RestaurantDetail = ({ route, navigation: { goBack } }) => {
       <CloseButton onPress={() => goBack()} />
 
       <RestaurantInfoCard restaurant={restaurant} />
-      <ScrollView>
-        <Spacer position="top" size="large">
+      <Spacer position="top" size="large">
+        <ScrollView>
           <List.Accordion
             title="Breakfast"
             left={(props) => <List.Icon {...props} icon="bread-slice" />}
@@ -81,8 +82,8 @@ export const RestaurantDetail = ({ route, navigation: { goBack } }) => {
             <List.Item title="First Item" />
             <List.Item title="Second Item" />
           </List.Accordion>
-        </Spacer>
-      </ScrollView>
+        </ScrollView>
+      </Spacer>
     </SafeArea>
   );
 };

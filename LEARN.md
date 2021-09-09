@@ -105,3 +105,14 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 
 - membuat marker untuk map, please buka map screen,
 - membuat resuable component bernama CompactRestaurantInfo
+
+# 8 Sep 2021
+
+- memnginstall expo webview, agar image dapat dirender di android
+- membuat onpress dalam mapview.callout
+- membuat favourite context, import di app dan consume di restaurants screen, membuat favorite component, coba liat di favorite.component.
+
+# 9 Sep 2021
+
+- membuat toggle favorite di searchbar,
+- membuat komponent toggle nya berupa scrollview, isinya compactrestaurantinfo, yang kalo onclick pergi ke restaurant detail
