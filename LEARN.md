@@ -116,3 +116,12 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 
 - membuat toggle favorite di searchbar,
 - membuat komponent toggle nya berupa scrollview, isinya compactrestaurantinfo, yang kalo onclick pergi ke restaurant detail
+- relearn lagi, untuk komponen yang dijalankan saat array kosong, langsung ambil aja variabel.length nya, kemudian return null
+- storing favorites menggunakan local storage, expo install @react-native-async-storage/async-storage
+- import asyncstorage di favorite context
+- rada kompleks ngatur localstorage dan state nya, relearn di favorites context
+  -- NOTE: Kalau menggunakan promise selalu cek async await nya, takutnya lupa terus error
+- Memakai kondisi isAndroid && isMap, pada compact-restaurant-info component, karena komponen ini digunakan di dua view yang berbeda, 1. view biasa dan kedua mapview, karena penggunaan Image dalam mapview android harus menggunakan webview agar image dapat dirender,2. sedangkan dalam view biasa, harus menggunakan komponen Image biasa juga agar gambar dapat dirender.
+  -- nuote: buka map callout component
+
+- membuat authenticatiion ----PENTING-----

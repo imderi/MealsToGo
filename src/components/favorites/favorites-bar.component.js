@@ -1,7 +1,8 @@
 import React from "react";
 import { ScrollView } from "react-native-gesture-handler";
 import styled from "styled-components";
-import { Text, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { Text } from "../typography/text.component";
 import { Spacer } from "../spacer/spacer.component";
 import { CompactRestaurantInfo } from "../restaurant/compact-restaurant-info.component";
 
@@ -16,6 +17,9 @@ export const FavoritesBar = ({ favorites, onNavigate }) => {
 
   return (
     <FavoritesWrapper>
+      <Spacer variant="left.large">
+        <Text variant="caption">Favorites</Text>
+      </Spacer>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {favorites.map((restaurant) => {
           const key = restaurant.name.split(" ").join("");
