@@ -122,6 +122,11 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 - rada kompleks ngatur localstorage dan state nya, relearn di favorites context
   -- NOTE: Kalau menggunakan promise selalu cek async await nya, takutnya lupa terus error
 - Memakai kondisi isAndroid && isMap, pada compact-restaurant-info component, karena komponen ini digunakan di dua view yang berbeda, 1. view biasa dan kedua mapview, karena penggunaan Image dalam mapview android harus menggunakan webview agar image dapat dirender,2. sedangkan dalam view biasa, harus menggunakan komponen Image biasa juga agar gambar dapat dirender.
-  -- nuote: buka map callout component
+  -- note: buka map callout component
+- menggunakan "eslint require-await:" untuk async await, agar await selalu dicheck kalau tidak ada, dimasukan di rules didalam eslintrc
 
-- membuat authenticatiion ----PENTING-----
+- akan membuat authenticatiion ----PENTING-----
+- membuat firebase projects => MealsToGo, kemudian membuat authentication => pilih nanya email dan password
+- expo install firebase
+- buka app.js
+- membuat key firebase, copy setting ke app.js, didalam app.js membuat firebase.auth
