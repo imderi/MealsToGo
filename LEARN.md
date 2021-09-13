@@ -132,3 +132,31 @@ important note: ()=>({}) curly braces didalam function body adalah shorthand unt
 - membuat key firebase, copy setting ke app.js, didalam app.js membuat firebase.auth
 - membuat service baru untuk authentication
 - membuat authentication context dan import ke app
+
+# 10 Sep 2021
+
+- memindahkan navigationcontainer dari app navigator ke navigation/index.js
+- membuat account,login,register screen, dan juga backgroundimage,
+- membuat komponen untuk user authentication, dan
+- membuat login
+
+# 11 Sep 2021
+
+- ada error di login gara" initialize firebase, harusnya cek dulu apakah firebase.apps.length itu kosong, baru initialize si firebase nya
+- ada error di login, dikarenakan salah me return value wkwkw, intinya kalau bikin function harus eksplisit deh
+  gara gara ini
+  //
+  import \* as firebase from "firebase";
+
+export const loginRequest = (email, password) =>
+firebase.auth().signInWithEmailAndPassword(email, password);
+
+karena gak pake function body makanya nge return langsung, gw malah gini :
+export const loginRequest = (email, password) => {
+_harusnya ada return disini_ firebase.auth().signInWithEmailAndPassword(email, password);
+}
+
+bakalan error soalnya gak nge return apa" jadinya gini biar jalan.
+//
+
+# 13 Sep 2021

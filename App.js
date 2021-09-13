@@ -8,7 +8,7 @@ import { LocationContextProvider } from "./src/services/location/location.contex
 import { FavoritesContextProvider } from "./src/services/favorites/favorites.context";
 import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context";
 
-import * as firebase from "firebase";
+import firebase from "firebase/app";
 
 import {
   useFonts as useOswald,
@@ -17,7 +17,7 @@ import {
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import { Navigation } from "./src/infrastructure/navigation/";
 
-// Initialize Firebase
+// Initialize Firebase Config
 const firebaseConfig = {
   apiKey: "AIzaSyBFJ9di4BUCbQjitRC-da8VSWeiI8KimW8",
   authDomain: "mealstogo-f3ecb.firebaseapp.com",
@@ -28,7 +28,7 @@ const firebaseConfig = {
   measurementId: "G-ZMK0CGGPX6",
 };
 
-if (!firebase.app.length) {
+if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 //\\ firebase
