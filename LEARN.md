@@ -160,3 +160,12 @@ bakalan error soalnya gak nge return apa" jadinya gini biar jalan.
 //
 
 # 13 Sep 2021
+
+- login,
+- hasil resturn api dari firebase saat login (error) tidak muncul, karena harus dirubah dulu ke string
+
+# 14 Sep 2021
+
+- memuat custom title, account components, error container
+- membuat user register, context nya juga
+- membuat loading dan activity indicator, menggunakan style sendiri dari react native paper nya aja

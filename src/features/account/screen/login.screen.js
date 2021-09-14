@@ -5,14 +5,16 @@ import {
   AccountCover,
   AuthButton,
   AuthInput,
-} from "../components/account-background.styles";
-
+  ErrorContainer,
+  LoadingIndicator,
+} from "../components/account.styles";
+import { Text } from "../../../components/typography/text.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
 
 export const Login = ({ navigation: { navigate } }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { onLogin } = useContext(AuthenticationContext);
+  const { onLogin, isLoading, error } = useContext(AuthenticationContext);
   return (
     <AccountBackground>
       <AccountCover />
@@ -34,7 +36,15 @@ export const Login = ({ navigation: { navigate } }) => {
           secure={true}
           onChangeText={(p) => setPassword(p)}
         />
+        {error && (
+          <ErrorContainer>
+            <Text variant="error">{error}</Text>
+          </ErrorContainer>
+        )}
+
         <AuthButton
+          disabled={isLoading}
+          loading={isLoading}
           icon="lock-open-outline"
           mode="contained"
           onPress={() => onLogin(email, password)}
