@@ -6,7 +6,6 @@ import {
   AuthButton,
   AuthInput,
   ErrorContainer,
-  LoadingIndicator,
 } from "../components/account.styles";
 import { Text } from "../../../components/typography/text.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
@@ -41,7 +40,6 @@ export const Login = ({ navigation: { navigate } }) => {
             <Text variant="error">{error}</Text>
           </ErrorContainer>
         )}
-
         <AuthButton
           disabled={isLoading}
           loading={isLoading}

@@ -14,8 +14,8 @@ const CloseButtonWrapper = styled.TouchableOpacity`
   background-color: rgba(80, 80, 80, 0.7);
   border-radius: ${45 / 2}px;
   margin: 10px;
-  position: absolute;
-  z-index: 999;
+  position: relative;
+  z-index: 1;
   align-items: center;
   justify-content: center;
 `;
@@ -37,7 +37,7 @@ export const RestaurantDetail = ({ route, navigation: { goBack } }) => {
   const [drinksExpanded, setDrinksExpanded] = useState(false);
 
   return (
-    <SafeArea>
+    <>
       <CloseButton onPress={() => goBack()} />
 
       <RestaurantInfoCard restaurant={restaurant} />
@@ -84,6 +84,6 @@ export const RestaurantDetail = ({ route, navigation: { goBack } }) => {
           </List.Accordion>
         </ScrollView>
       </Spacer>
-    </SafeArea>
+    </>
   );
 };

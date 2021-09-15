@@ -168,4 +168,8 @@ bakalan error soalnya gak nge return apa" jadinya gini biar jalan.
 
 - memuat custom title, account components, error container
 - membuat user register, context nya juga
-- membuat loading dan activity indicator, menggunakan style sendiri dari react native paper nya aja
+- membuat loading dan activity indicator, menggunakan style sendiri dari react native paper nya aja (gak ngikutin course)
+
+# 15 Sep 2021
+
+- menggabungkan favorites dengan user, agar user memiliki favorites dia sendiri, please check di favorites context

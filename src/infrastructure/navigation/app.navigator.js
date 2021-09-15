@@ -1,6 +1,4 @@
 import React from "react";
-import { Text } from "react-native";
-import { SafeArea } from "../../components/utility/safe-area.component";
 import { Ionicons } from "@expo/vector-icons";
 
 // NAVIGATION
@@ -9,19 +7,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 // OTHERS NAVIGATOR
 import { RestaurantNavigator } from "./restaurants.navigation";
 import { MapNavigator } from "./map.navigation";
+import { SettingsNavigator } from "./settings.navigation";
 
 // NAVIGATION - TAB
 const Tab = createBottomTabNavigator();
-
-const Settings = () => {
-  return (
-    <SafeArea>
-      <Text>Settings Here</Text>
-    </SafeArea>
-  );
-};
-
-// up is ex
 
 export const AppNavigator = () => {
   return (
@@ -34,7 +23,7 @@ export const AppNavigator = () => {
             iconName = focused ? "restaurant" : "restaurant-outline";
           } else if (route.name === "Maps") {
             iconName = focused ? "map" : "map-outline";
-          } else if (route.name === "Settings") {
+          } else if (route.name === "Settings Navigator") {
             iconName = focused ? "settings" : "settings-outline";
           }
 
@@ -47,7 +36,11 @@ export const AppNavigator = () => {
     >
       <Tab.Screen name="Restaurant" component={RestaurantNavigator} />
       <Tab.Screen name="Maps" component={MapNavigator} />
-      <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen
+        name="Settings Navigator"
+        options={{ title: "Settings" }}
+        component={SettingsNavigator}
+      />
     </Tab.Navigator>
   );
 };
