@@ -1,16 +1,30 @@
 import React from "react";
+import LottieView from "lottie-react-native";
+
 import {
   AccountBackground,
   AccountContainer,
   AccountCover,
   AuthButton,
   Title,
+  AnimationWrapper,
 } from "../components/account.styles";
 
 export const Account = ({ navigation: { navigate } }) => {
   return (
     <AccountBackground>
       <AccountCover />
+      <AnimationWrapper>
+        <LottieView
+          speed={0.3}
+          key="animation"
+          autoPlay
+          loop={true}
+          resizeMode="cover"
+          source={require("../../../../assets/food-animation.json")}
+        />
+      </AnimationWrapper>
+
       <Title>Meals To Go</Title>
       <AccountContainer>
         <AuthButton

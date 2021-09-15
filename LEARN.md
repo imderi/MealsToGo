@@ -173,3 +173,12 @@ bakalan error soalnya gak nge return apa" jadinya gini biar jalan.
 # 15 Sep 2021
 
 - menggabungkan favorites dengan user, agar user memiliki favorites dia sendiri, please check di favorites context
+- mengubah struktur program sehingga favorites tidak tercampur, liat di app.js dan juga navigation, intinya authenticationcontextprovider dipisah dari lainnya.
+  kenapa dipisah? karena utamanya semua context berjalan di satu file, nah si favorites itu ada tepat dibawah auth context, saat auth context di unmount, si context bawahan lainnya ini gak ke clean, makanya context favorites dipisah ke level navigation, biar secara gak langsung terpisah sama kode utama, buka app.navigation.js
+  kayak gini nih yg lama - auth -> other context -> navigation
+  kayak gini nih yg baru - auth -> navgigation -> other context
+  Intinya: hanya gunakan context di tempat yang dibutuhkan
+- belajar LOTTIE, animation library dari airbnb
+- install lottie, pake file lottie json yg udah ada
+- Pake lottie view, terus bikin wrapper buat lottie view nya, udah gitu aja
+-
