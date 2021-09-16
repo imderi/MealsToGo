@@ -9,10 +9,10 @@ import { Spacer } from "../../../components/spacer/spacer.component";
 import { ScrollView } from "react-native-gesture-handler";
 
 const CloseButtonWrapper = styled.TouchableOpacity`
-  width: 40px;
-  min-height: 40px;
+  width: 30px;
+  min-height: 30px;
   background-color: rgba(80, 80, 80, 0.7);
-  border-radius: ${45 / 2}px;
+  border-radius: ${30 / 2}px;
   margin: 10px;
   position: relative;
   z-index: 1;
@@ -23,7 +23,7 @@ const CloseButtonWrapper = styled.TouchableOpacity`
 const CloseButton = ({ onPress }) => {
   return (
     <CloseButtonWrapper onPress={onPress}>
-      <Ionicons name="close" size={25} color="white" />
+      <Ionicons name="close" size={22} color="white" />
     </CloseButtonWrapper>
   );
 };
@@ -41,49 +41,49 @@ export const RestaurantDetail = ({ route, navigation: { goBack } }) => {
       <CloseButton onPress={() => goBack()} />
 
       <RestaurantInfoCard restaurant={restaurant} />
-      <Spacer position="top" size="large">
-        <ScrollView>
-          <List.Accordion
-            title="Breakfast"
-            left={(props) => <List.Icon {...props} icon="bread-slice" />}
-            expanded={breakfastExpanded}
-            onPress={() => setBreakfastExpanded(!breakfastExpanded)}
-          >
-            <List.Item title="First Item" />
-            <List.Item title="Second Item" />
-          </List.Accordion>
+      {/* <Spacer position="top" size="large"> */}
+      <ScrollView>
+        <List.Accordion
+          title="Breakfast"
+          left={(props) => <List.Icon {...props} icon="bread-slice" />}
+          expanded={breakfastExpanded}
+          onPress={() => setBreakfastExpanded(!breakfastExpanded)}
+        >
+          <List.Item title="First Item" />
+          <List.Item title="Second Item" />
+        </List.Accordion>
 
-          <List.Accordion
-            title="Lunch"
-            left={(props) => <List.Icon {...props} icon="hamburger" />}
-            expanded={lunchExpanded}
-            onPress={() => setLunchExpanded(!lunchExpanded)}
-          >
-            <List.Item title="First Item" />
-            <List.Item title="Second Item" />
-          </List.Accordion>
+        <List.Accordion
+          title="Lunch"
+          left={(props) => <List.Icon {...props} icon="hamburger" />}
+          expanded={lunchExpanded}
+          onPress={() => setLunchExpanded(!lunchExpanded)}
+        >
+          <List.Item title="First Item" />
+          <List.Item title="Second Item" />
+        </List.Accordion>
 
-          <List.Accordion
-            title="Dinner"
-            left={(props) => <List.Icon {...props} icon="food-variant" />}
-            expanded={dinnerExpanded}
-            onPress={() => setDinnerExpanded(!dinnerExpanded)}
-          >
-            <List.Item title="First Item" />
-            <List.Item title="Second Item" />
-          </List.Accordion>
+        <List.Accordion
+          title="Dinner"
+          left={(props) => <List.Icon {...props} icon="food-variant" />}
+          expanded={dinnerExpanded}
+          onPress={() => setDinnerExpanded(!dinnerExpanded)}
+        >
+          <List.Item title="First Item" />
+          <List.Item title="Second Item" />
+        </List.Accordion>
 
-          <List.Accordion
-            title="Drinks"
-            left={(props) => <List.Icon {...props} icon="coffee" />}
-            expanded={drinksExpanded}
-            onPress={() => setDrinksExpanded(!drinksExpanded)}
-          >
-            <List.Item title="First Item" />
-            <List.Item title="Second Item" />
-          </List.Accordion>
-        </ScrollView>
-      </Spacer>
+        <List.Accordion
+          title="Drinks"
+          left={(props) => <List.Icon {...props} icon="coffee" />}
+          expanded={drinksExpanded}
+          onPress={() => setDrinksExpanded(!drinksExpanded)}
+        >
+          <List.Item title="First Item" />
+          <List.Item title="Second Item" />
+        </List.Accordion>
+      </ScrollView>
+      {/* </Spacer> */}
     </>
   );
 };
