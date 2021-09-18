@@ -181,4 +181,18 @@ bakalan error soalnya gak nge return apa" jadinya gini biar jalan.
 - belajar LOTTIE, animation library dari airbnb
 - install lottie, pake file lottie json yg udah ada
 - Pake lottie view, terus bikin wrapper buat lottie view nya, udah gitu aja
--
+- membuat settings navigation dan screen navigation
+
+# 16 Sep 2021
+
+- menggunakan avatar.icon dari react native paper
+
+# 17 Sep 2021
+
+- membuat favorites screen
+- belajar aniamation
+
+# 18 Sep 2021
+
+- membuat animation (fadeinanimation)
+- membuat app icon

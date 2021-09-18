@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components/native";
-import { FlatList, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 import { ActivityIndicator, Colors } from "react-native-paper";
 import { Search } from "../components/search.component";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
@@ -10,6 +10,9 @@ import { FavoritesBar } from "../../../components/favorites/favorites-bar.compon
 
 import { RestaurantContext } from "../../../services/restaurants/restaurants.context";
 import { FavoritesContext } from "../../../services/favorites/favorites.context";
+import { RestaurantList } from "../components/restaurant-list.styles";
+
+import { FadeInView } from "../../../components/animations/fade.animation";
 
 const LoadingContainer = styled.View`
   position: absolute;
@@ -21,11 +24,6 @@ const LoadingIndicator = styled(ActivityIndicator)`
   margin-left: -25px;
 `;
 
-// attrs disini adalah function untuk mention setiap arrtibutes dari setiap elemen dom yang sama
-// singkatnya untuk memberikan akses untuk memberikan props pada default flatlist
-const RestaurantList = styled(FlatList).attrs({
-  contentContainerStyle: { padding: 16 },
-})``;
 // ini sendiri
 // const RestaurantList = styled.FlatList`
 //   padding: 16px;
@@ -69,7 +67,9 @@ export const RestaurantsScreen = ({ navigation }) => {
             }
           >
             <Spacer position="bottom" size="large">
-              <RestaurantInfoCard restaurant={item} />
+              <FadeInView>
+                <RestaurantInfoCard restaurant={item} />
+              </FadeInView>
             </Spacer>
           </TouchableOpacity>
         )}

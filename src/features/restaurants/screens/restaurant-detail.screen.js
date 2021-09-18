@@ -5,7 +5,6 @@ import { SafeArea } from "../../../components/utility/safe-area.component";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 import { List } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
-import { Spacer } from "../../../components/spacer/spacer.component";
 import { ScrollView } from "react-native-gesture-handler";
 
 const CloseButtonWrapper = styled.TouchableOpacity`
@@ -13,7 +12,7 @@ const CloseButtonWrapper = styled.TouchableOpacity`
   min-height: 30px;
   background-color: rgba(80, 80, 80, 0.7);
   border-radius: ${30 / 2}px;
-  margin: 10px;
+  margin: 8px;
   position: relative;
   z-index: 1;
   align-items: center;
