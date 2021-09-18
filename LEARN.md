@@ -195,4 +195,5 @@ bakalan error soalnya gak nge return apa" jadinya gini biar jalan.
 # 18 Sep 2021
 
 - membuat animation (fadeinanimation)
-- membuat app icon
+- mengubah app icon dan flash screen (di expo mah cuman gitu doang)
+- expo publish
