@@ -197,3 +197,7 @@ bakalan error soalnya gak nge return apa" jadinya gini biar jalan.
 - membuat animation (fadeinanimation)
 - mengubah app icon dan flash screen (di expo mah cuman gitu doang)
 - expo publish
+
+# EXTRA!
+
+- camera modules
