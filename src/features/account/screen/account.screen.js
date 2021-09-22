@@ -1,4 +1,5 @@
 import React from "react";
+import { StatusBar } from "expo-status-bar";
 import LottieView from "lottie-react-native";
 
 import {
@@ -13,6 +14,7 @@ import {
 export const Account = ({ navigation: { navigate } }) => {
   return (
     <AccountBackground>
+      <StatusBar />
       <AccountCover />
       <AnimationWrapper>
         <LottieView

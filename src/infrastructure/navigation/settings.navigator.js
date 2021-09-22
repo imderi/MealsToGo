@@ -7,6 +7,7 @@ import {
 // SCREEN
 import { SettingsScreen } from "../../features/settings/screens/settings.screen";
 import { FavoritesScreen } from "../../features/settings/screens/favorites.screen";
+import { CameraScreen } from "../../features/settings/screens/camera.screen";
 
 // pada screen ini, navigation container tidak dibutuhkan
 // karena restaurantstack merupakan sub dari appnavigator
@@ -26,6 +27,7 @@ export const SettingsNavigator = ({ route, navigation }) => {
         options={{ header: () => null }}
       />
       <SettingsStack.Screen name="Favorites" component={FavoritesScreen} />
+      <SettingsStack.Screen name="Camera" component={CameraScreen} />
     </SettingsStack.Navigator>
   );
 };

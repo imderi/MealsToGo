@@ -23,6 +23,7 @@ export const AuthenticationContextProvider = ({ children }) => {
       .then((usr) => {
         setUser(usr);
         setIsLoading(false);
+        setError("");
       })
       .catch((err) => {
         setError(err.toString());
