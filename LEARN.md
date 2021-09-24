@@ -205,3 +205,7 @@ bakalan error soalnya gak nge return apa" jadinya gini biar jalan.
 # 22 Sep 2021
 
 - camera modules
+
+# 24 Sep 2021
+
+-
